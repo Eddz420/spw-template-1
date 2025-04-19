@@ -1,0 +1,27 @@
+{
+    "label": "العربية",
+    "flag": "sa",
+    "company": {
+      "name": "The Curve",
+      "slogan": "مرحبًا بك في The Curve",
+      "description": "اختبر الجيل القادم من تطوير الويب باستخدام Angular و Tailwind CSS."
+    },
+    "nav": {
+      "home": "الصفحة الرئيسية",
+      "about": "حول",
+      "contact": "اتصل"
+    },
+    "cta": {
+      "get-started": "ابدأ الآن!"
+    },
+    "footer": {
+      "links": {
+        "terms": "شروط الخدمة",
+        "privacy": "سياسة الخصوصية",
+        "cookies": "سياسة الكوكيز",
+        "disclaimer": "إخلاء المسؤولية"
+      },
+      "copyright": "© 2024 The Curve. جميع الحقوق محفوظة."
+    }
+  }
+  

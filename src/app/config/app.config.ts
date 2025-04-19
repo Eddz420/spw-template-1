@@ -1,27 +1,22 @@
 export const AppConfig = {
   company: {
-    name: 'The niggers',
-    slogan: 'Welcome to the curve',
-    description:
-      'Experience the next generation of web development with Angular and Tailwind CSS.',
+    name: 'The Curve',
   },
   navigation: {
     links: [
-      { path: '#', label: 'Home' },
-      { path: '#', label: 'About' },
-      { path: '#', label: 'Contact' },
-    ],
+      { path: '#', labelKey: 'nav.home' },
+      { path: '#', labelKey: 'nav.about' },
+      { path: '#', labelKey: 'nav.contact' }
+    ]
   },
+  languageCodes : ['en', 'fr', 'ar'],
   footer: {
     links: [
-      { path: '/terms', label: 'Terms of Service' },
-      { path: '/privacy', label: 'Privacy Policy' },
-      { path: '/cookies', label: 'Cookie Policy' },
-      { path: '/disclaimer', label: 'Disclaimer' },
+      { path: '/terms', labelKey: 'footer.links.terms' },
+      { path: '/privacy', labelKey: 'footer.links.privacy' },
+      { path: '/cookies', labelKey: 'footer.links.cookies' },
+      { path: '/disclaimer', labelKey: 'footer.links.disclaimer' }
     ],
-    copyright: '© 2024 Angular. All rights reserved.',
-  },
-  cta: {
-    primary: 'Get Started',
+    copyright: 'footer.copyright'
   },
 } as const;

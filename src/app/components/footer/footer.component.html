@@ -15,12 +15,12 @@
           [href]="link.path"
           class="text-light-text/80 dark:text-dark-text/80 hover:text-light-primary dark:hover:text-dark-primary transition-colors"
         >
-          {{ link.label }}
+          {{ link.labelKey | translate }}
         </a>
       </div>
     </div>
     <div class="mt-8 text-center text-light-text/60 dark:text-dark-text/60">
-      {{ config.footer.copyright }}
+      {{ config.footer.copyright | translate }}
     </div>
   </div>
 </footer>

@@ -1,0 +1,27 @@
+{
+    "label": "English",
+    "flag": "gb",
+    "company": {
+      "name": "The Curve",
+      "slogan": "Welcome to the curve",
+      "description": "Experience the next generation of web development with Angular and Tailwind CSS."
+    },
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "cta": {
+      "get-started": "Get Started !"
+    },
+    "footer": {
+      "links": {
+        "terms": "Terms of Service",
+        "privacy": "Privacy Policy",
+        "cookies": "Cookie Policy",
+        "disclaimer": "Disclaimer"
+      },
+      "copyright": "© 2024 The curve. All rights reserved."
+    }
+    
+}

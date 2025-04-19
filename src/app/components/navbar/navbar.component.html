@@ -18,14 +18,16 @@
               <a
                 *ngFor="let link of config.navigation.links"
                 [href]="link.path"
+
                 class="text-light-text dark:text-dark-text hover:text-light-primary dark:hover:text-dark-primary px-3 py-2 rounded-md text-sm font-medium"
               >
-                {{ link.label }}
-              </a>
+              {{ link.labelKey | translate }}
+            </a>
             </div>
           </div>
         </div>
         <div class="flex flex-row gap-2">
+          <app-language-switcher></app-language-switcher>
           <app-theme-switcher></app-theme-switcher>
           <div
             (click)="toggleMenu()"
@@ -71,8 +73,9 @@
       [href]="link.path"
       class="w-full text-light-text p-2 button text-lg font-medium rounded-xl"
       (click)="toggleMenu()"
+      [translate]="link.labelKey"
     >
-      {{ link.label }}
+      {{ link.labelKey | translate }}
     </a>
   </div>
 </div>

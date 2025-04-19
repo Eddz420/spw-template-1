@@ -1,0 +1,44 @@
+<div class="relative inline-block text-left">
+    <button
+      class="flex items-center gap-2 px-4 py-2 bg-light-surface dark:bg-dark-surface text-light-text dark:text-dark-text rounded-lg shadow-md hover:bg-light-background dark:hover:bg-dark-background transition"
+      (click)="isDropdownOpen = !isDropdownOpen"
+    >
+        <img
+        alt="United States"
+        class="w-5"
+        src="http://purecatamphetamine.github.io/country-flag-icons/3x2/{{currentLanguageFlag}}.svg"/>
+      <span>{{ currentLanguageLabel }}</span>
+      <svg
+        class="w-4 h-4"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M19 9l-7 7-7-7"
+        />
+      </svg>
+    </button>
+    <div
+      *ngIf="isDropdownOpen"
+      class="absolute right-0 mt-2 w-48 bg-light-surface dark:bg-dark-surface rounded-lg shadow-lg z-10"
+    >
+      <ul>
+        <li
+          *ngFor="let lang of languages"
+          (click)="changeLanguage(lang.code); isDropdownOpen = false"
+          class="flex items-center rounded-lg gap-2 px-4 py-2 hover:bg-light-background dark:hover:bg-dark-background cursor-pointer"
+        >
+          <img
+          alt="United States"
+          class="w-5"
+          src="http://purecatamphetamine.github.io/country-flag-icons/3x2/{{lang.flag}}.svg"/>
+          <span>{{ lang.label }}</span>
+        </li>
+      </ul>
+    </div>
+  </div>

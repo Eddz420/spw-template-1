@@ -9,8 +9,8 @@
 body {
   @apply bg-light-background dark:bg-dark-background text-light-text dark:text-dark-text transition-colors duration-300;
   margin: 0;
-  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue',
-    Arial, sans-serif;
+  font-family: system-ui, Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif;
+
 }
 
 @layer components {

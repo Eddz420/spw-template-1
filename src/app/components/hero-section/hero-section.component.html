@@ -8,16 +8,16 @@
           <span
             class="bg-clip-text text-transparent bg-gradient-to-r from-light-primary to-light-accent dark:from-dark-primary dark:to-dark-accent"
           >
-            {{ config.company.slogan }}
-          </span>
+            {{ 'company.slogan' | translate }}
+        </span>
         </h1>
         <p class="text-lg text-light-text/80 dark:text-dark-text/80">
-          {{ config.company.description }}
+          {{ 'company.description' | translate }}
         </p>
         <button
           class="px-6 py-3 bg-light-primary dark:bg-dark-primary text-white rounded-lg hover:opacity-90 transition-opacity"
-        >
-          {{ config.cta.primary }}
+          >
+          {{ 'cta.get-started' | translate }}
         </button>
       </div>
       <div

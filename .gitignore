@@ -1,3 +1,7 @@
-/packge-lock.json
+package-lock.json
 /node_modules
 /.angular
+
+
+# compiled output
+/dist
