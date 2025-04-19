@@ -1,62 +1,65 @@
-<nav
-  class="fixed w-[calc(100%-32px)] m-4 backdrop-blur-md bg-light-surface/80 dark:bg-dark-surface/80 shadow-lg z-50 rounded-xl"
->
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between items-center h-16">
-      <div class="flex items-center">
-        <div class="flex-shrink-0">
-          <span
-            class="text-xl font-bold text-light-primary dark:text-dark-primary"
-          >
-            {{ config.company.name }}
-          </span>
-        </div>
-        <!-- Desktop Nav -->
-        <div class="hidden md:block">
-          <div class="ml-10 flex items-baseline space-x-4">
-            <a
-              *ngFor="let link of config.navigation.links"
-              [href]="link.path"
-              class="text-light-text dark:text-dark-text hover:text-light-primary dark:hover:text-dark-primary px-3 py-2 rounded-md text-sm font-medium"
+<nav class="flex justify-center">
+  <div
+    class=" fixed w-[calc(100%-32px)] max-screen-width m-4 backdrop-blur-md bg-light-surface/80 dark:bg-dark-surface/80 shadow-lg z-50 rounded-xl"
+  >
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between  h-16">
+        <div class="flex items-center">
+          <div class="flex-shrink-0">
+            <span
+              class="text-xl font-bold text-light-primary dark:text-dark-primary"
             >
-              {{ link.label }}
-            </a>
+              {{ config.company.name }}
+            </span>
+          </div>
+          <!-- Desktop Nav -->
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-4">
+              <a
+                *ngFor="let link of config.navigation.links"
+                [href]="link.path"
+                class="text-light-text dark:text-dark-text hover:text-light-primary dark:hover:text-dark-primary px-3 py-2 rounded-md text-sm font-medium"
+              >
+                {{ link.label }}
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="flex flex-row gap-2">
-        <app-theme-switcher></app-theme-switcher>
-        <div
-          (click)="toggleMenu()"
-          class="md:hidden cursor-pointer flex z-50 items-center p-2 button"
-        >
+        <div class="flex flex-row gap-2">
+          <app-theme-switcher></app-theme-switcher>
           <div
-            class="relative w-6 h-5 focus:outline-none z-50"
-            aria-label="Toggle navigation"
+            (click)="toggleMenu()"
+            class="md:hidden cursor-pointer flex z-50 items-center p-2 button"
           >
-            <span
-              class="absolute block top-0 w-6 h-0.5 bg-current transform transition duration-300 ease-in-out"
-              [class.rotate-45]="isMenuOpen"
-              [class.translate-y-2]="isMenuOpen"
-            ></span>
-            <span
-              class="absolute block top-0 w-6 h-0.5 bg-current mt-2 transition duration-300 ease-in-out"
-              [class.opacity-0]="isMenuOpen"
-            ></span>
-            <span
-              class="absolute block top-0 w-6 h-0.5 bg-current mt-4 transition duration-300 ease-in-out"
-              [class.-rotate-45]="isMenuOpen"
-              [class.-translate-y-2]="isMenuOpen"
-            ></span>
+            <div
+              class="relative w-6 h-5 focus:outline-none z-50"
+              aria-label="Toggle navigation"
+            >
+              <span
+                class="absolute block top-0 w-6 h-0.5 bg-current transform transition duration-300 ease-in-out"
+                [class.rotate-45]="isMenuOpen"
+                [class.translate-y-2]="isMenuOpen"
+              ></span>
+              <span
+                class="absolute block top-0 w-6 h-0.5 bg-current mt-2 transition duration-300 ease-in-out"
+                [class.opacity-0]="isMenuOpen"
+              ></span>
+              <span
+                class="absolute block top-0 w-6 h-0.5 bg-current mt-4 transition duration-300 ease-in-out"
+                [class.-rotate-45]="isMenuOpen"
+                [class.-translate-y-2]="isMenuOpen"
+              ></span>
+            </div>
           </div>
         </div>
+        <!-- Burger Button (Mobile) -->
       </div>
-      <!-- Burger Button (Mobile) -->
     </div>
-  </div>
 
-  <!-- Mobile Menu -->
+    <!-- Mobile Menu -->
+  </div>
 </nav>
+
 <div
   class="md:hidden fixed top-[6rem] w-[calc(100%-32px)] rounded-xl inset-0 bg-light-surface/95 dark:bg-dark-surface/95 transition-transform duration-300 ease-in-out z-40 h-min"
   [class.translate-x-[16px]]="isMenuOpen"

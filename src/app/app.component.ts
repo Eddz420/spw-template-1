@@ -7,14 +7,8 @@ import { NgClass } from '@angular/common';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [NavbarComponent, HeroSectionComponent, FooterComponent, NgClass],
-  template: `
-    <div class="min-h-screen bg-gradient-to-br from-light-background to-light-surface dark:from-dark-background dark:to-dark-surface transition-colors duration-300">
-      <app-navbar></app-navbar>
-      <app-hero-section></app-hero-section>
-      <app-footer></app-footer>
-    </div>
-  `,
+  imports: [NavbarComponent, HeroSectionComponent, FooterComponent],
+  templateUrl: './app.component.html',
 })
 export class AppComponent {
   title = 'Angular with Tailwind';
