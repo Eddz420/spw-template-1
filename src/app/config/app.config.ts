@@ -1,6 +1,6 @@
 export const AppConfig = {
   company: {
-    name: 'The Curve',
+    name: 'Wi-keys',
   },
   navigation: {
     links: [
@@ -9,6 +9,7 @@ export const AppConfig = {
       { path: '#', labelKey: 'nav.contact' }
     ]
   },
+  // Very important for translating the app
   languageCodes : ['en', 'fr', 'ar'],
   footer: {
     links: [
